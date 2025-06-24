@@ -1,0 +1,7 @@
+wrapper_name = "LibUbench"
+
+[functions.ubench_nop]
+fntab_id = 0
+
+[functions.ubench_invoke_callback]
+fntab_id = 1
