@@ -1,0 +1,14 @@
+[package]
+name = "omniglot-tock-lwip"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+kernel.workspace = true
+omniglot.workspace = true
+omniglot-tock.path = "../../omniglot-tock"
+
+[build-dependencies]
+bindgen.workspace = true
+cc = "1.0.90"

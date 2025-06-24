@@ -1,5 +1,7 @@
 [workspace]
 members = [
+    "examples/lwip",
+    "examples/lwip-boards/earlgrey-cw310",
     "omniglot-tock",
 ]
 resolver = "2"
