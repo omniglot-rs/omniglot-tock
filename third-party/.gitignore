@@ -1,0 +1,3 @@
+# Ignore downloaded and unpacked opentitan-cryptolib.tar.xz
+/opentitan-cryptolib.tar.xz
+/opentitan-cryptolib/*

@@ -343,6 +343,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "omniglot-earlgrey-cw310"
+version = "0.1.0"
+dependencies = [
+ "earlgrey",
+ "earlgrey_board_lib",
+ "kernel",
+ "omniglot",
+ "omniglot-example-otcrypto",
+ "omniglot-tock",
+ "tock_build_scripts",
+]
+
+[[package]]
 name = "omniglot-earlgrey-cw310-ubench"
 version = "0.1.0"
 dependencies = [
@@ -353,6 +366,17 @@ dependencies = [
  "omniglot-tock",
  "omniglot-tock-ubench",
  "tock_build_scripts",
+]
+
+[[package]]
+name = "omniglot-example-otcrypto"
+version = "0.1.0"
+dependencies = [
+ "bindgen",
+ "cc",
+ "kernel",
+ "omniglot",
+ "omniglot-tock",
 ]
 
 [[package]]
