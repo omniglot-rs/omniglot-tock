@@ -1,0 +1,15 @@
+[package]
+name = "omniglot-tock-ubench"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[build-dependencies]
+bindgen.workspace = true
+cc = "1.0.90"
+
+[dependencies]
+kernel.workspace = true
+omniglot.workspace = true
+omniglot-tock.path = "../../omniglot-tock" # only used for the print_ogbench_results helper
+
