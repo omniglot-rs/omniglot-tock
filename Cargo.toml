@@ -1,0 +1,64 @@
+[workspace]
+members = [
+    "omniglot-tock",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Leon Schuermann <leon@is.currently.online>"]
+edition = "2021"
+
+[workspace.dependencies]
+omniglot = { git = "https://github.com/omniglot-rs/omniglot", rev = "82f17de8cc588643ccd28d42dd0e2cccaba6d6b6" }
+bindgen = { git = "https://github.com/omniglot-rs/rust-bindgen", rev = "b54f076fcd126a103f3089af15e9789e4a403d11" }
+
+# Some of these dependencies are used in examples which are not included in this
+# git revision but located on development branches. We include the full set of
+# dependencies here in a shared base commit to avoid them diverging between the
+# other branches:
+capsules-core = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+capsules-extra = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+capsules-system = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+components = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+kernel = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+tock-tbf = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+tock_build_scripts = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+rv32i = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+sifive = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+qemu_rv32_virt_chip = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+qemu_rv32_virt = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+earlgrey_board_lib = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+earlgrey = { git = "https://github.com/omniglot-rs/tock", rev = "14800536febc633ef4202b656adc9c29e3ea882e" }
+
+# # Use relative paths for artifact evaluation:
+# omniglot = { path = "../omniglot" }
+# bindgen = { path = "../rust-bindgen/bindgen" }
+
+# capsules-core = { path = "../tock/capsules/core" }
+# capsules-extra = { path = "../tock/capsules/extra" }
+# capsules-system = { path = "../tock/capsules/system" }
+# components = { path = "../tock/boards/components" }
+# kernel = { path = "../tock/kernel" }
+# tock-tbf = { path = "../tock/libraries/tock-tbf" }
+# tock_build_scripts = { path = "../tock/boards/build_scripts" }
+# rv32i = { path = "../tock/arch/rv32i" }
+# sifive = { path = "../tock/chips/sifive" }
+# qemu_rv32_virt_chip = { path = "../tock/chips/qemu_rv32_virt_chip" }
+# qemu_rv32_virt = { path = "../tock/boards/qemu_rv32_virt" }
+# earlgrey_board_lib = { path = "../tock/boards/opentitan/earlgrey" }
+# earlgrey = { path = "../tock/chips/earlgrey" }
+
+
+[profile.dev]
+panic = "abort"
+lto = false
+opt-level = "z"
+debug = true
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = "z"
+debug = true
+codegen-units = 1
