@@ -356,6 +356,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "omniglot-earlgrey-cw310-littlefs"
+version = "0.1.0"
+dependencies = [
+ "earlgrey",
+ "earlgrey_board_lib",
+ "kernel",
+ "omniglot",
+ "omniglot-tock",
+ "omniglot-tock-littlefs",
+ "tock_build_scripts",
+]
+
+[[package]]
 name = "omniglot-earlgrey-cw310-ubench"
 version = "0.1.0"
 dependencies = [
@@ -387,6 +400,17 @@ dependencies = [
  "omniglot",
  "rv32i",
  "tock-tbf",
+]
+
+[[package]]
+name = "omniglot-tock-littlefs"
+version = "0.1.0"
+dependencies = [
+ "bindgen",
+ "cc",
+ "kernel",
+ "omniglot",
+ "omniglot-tock",
 ]
 
 [[package]]

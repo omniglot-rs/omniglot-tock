@@ -1,5 +1,7 @@
 [workspace]
 members = [
+    "examples/littlefs",
+    "examples/littlefs-boards/earlgrey-cw310",
     "examples/otcrypto",
     "examples/otcrypto-boards/earlgrey-cw310",
     "examples/ubench",
