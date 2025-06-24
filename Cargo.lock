@@ -369,6 +369,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "omniglot-earlgrey-cw310-lwip"
+version = "0.1.0"
+dependencies = [
+ "earlgrey",
+ "earlgrey_board_lib",
+ "kernel",
+ "omniglot",
+ "omniglot-tock",
+ "omniglot-tock-lwip",
+ "tock_build_scripts",
+]
+
+[[package]]
 name = "omniglot-earlgrey-cw310-ubench"
 version = "0.1.0"
 dependencies = [
@@ -404,6 +417,17 @@ dependencies = [
 
 [[package]]
 name = "omniglot-tock-littlefs"
+version = "0.1.0"
+dependencies = [
+ "bindgen",
+ "cc",
+ "kernel",
+ "omniglot",
+ "omniglot-tock",
+]
+
+[[package]]
+name = "omniglot-tock-lwip"
 version = "0.1.0"
 dependencies = [
  "bindgen",
